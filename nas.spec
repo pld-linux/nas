@@ -84,7 +84,7 @@ CXXDEBUGFLAGS="$RPM_OPT_FLAGS -w" World
 rm -rf $RPM_BUILD_ROOT
 make install install.man DESTDIR=$RPM_BUILD_ROOT
 
-strip --strip-unneeded %{_libdir}/lib*.so.*.*
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man?/*
 
