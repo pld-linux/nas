@@ -4,7 +4,7 @@ Summary(ru):	NAS - клиент-серверная сетевая поддержка аудио
 Summary(uk):	NAS - кл╕╓нт-серверна мережева п╕дтримка ауд╕о
 Name:		nas
 Version:	1.5
-Release:	2
+Release:	3
 License:	Free
 Group:		Applications/Sound
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
@@ -40,7 +40,7 @@ bibliotek╠. Najwa©niejsze zalety sieciowego systemu d╪wiЙku:
    programСw
  - U©ycie wzrastaj╠cej ilo╤ci ISV
  - MaЁy rozmiar programu
- - Wolne oprogramowanie ! Nie ma ograniczeЯ licencyjnych
+ - Wolne oprogramowanie! Nie ma ograniczeЯ licencyjnych
 
 %description -l ru
 Этот пакет содержит прозрачную для сети систему клиент-серверной
@@ -137,13 +137,14 @@ mv $RPM_BUILD_ROOT%{_mandir}/man5/nasd.conf.5nas \
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
 %doc README FAQ TODO BUGS
-%config(noreplace) %{_sysconfdir}/nasd.conf
+%dir %{_sysconfdir}
+%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/nasd.conf
 %attr(755,root,root) %{_libdir}/lib*.so.*
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/X11/AuErrorDB
