@@ -2,7 +2,7 @@ Summary:	Network Audio System
 Summary(pl):	Sieciowy system d¼wiêku (NAS)
 Name:		nas
 Version:	1.5
-Release:	1
+Release:	2
 License:	Free
 Group:		Applications/Sound
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
@@ -86,6 +86,8 @@ mv $RPM_BUILD_ROOT%{_sysconfdir}/nasd.conf.eg \
 mv $RPM_BUILD_ROOT%{_mandir}/man5/nasd.conf.5nas \
 	$RPM_BUILD_ROOT%{_mandir}/man5/nasd.conf.5
 
+gzip -9nf README FAQ TODO BUGS doc/{protocol.txt,actions,*.ps}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -94,6 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %config(noreplace) %{_sysconfdir}/nasd.conf
 %attr(755,root,root) %{_libdir}/lib*.so.*
 %attr(755,root,root) %{_bindir}/*
@@ -102,6 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%doc doc/{protocol.txt,actions.txt,*.ps}.gz
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/audio
 %{_mandir}/man3/*
