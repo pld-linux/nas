@@ -122,7 +122,7 @@ xmkmf
 %{__make} World \
 	WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
 	CXXDEBUGFLAGS="%{rpmcflsgs} -w" \
-	REQUIREDLIBS="-L/usr/X11R6/lib -lXt -X11 -lm" \
+	REQUIREDLIBS="-L/usr/X11R6/%{_lib} -lXt -X11 -lm" \
 	CC=%{__cc}
 
 %install
