@@ -6,7 +6,7 @@ Release:	7
 Copyright:	free
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
-Source:		ftp://ftp.x.org/contrib/audio/nas/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.x.org/contrib/audio/nas/%{name}-%{version}.tar.gz
 Patch0:		nas.patch
 Patch1:		nas-shared.patch
 Patch2:		nas-glibc.patch
@@ -17,35 +17,37 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-This package contains a network-transparent, client/server audio system,
-with a library
-Key features of the Network Audio System include:
-    o   Device-independent audio over the network
-    o   Lots of audio file and data formats
-    o   Can store sounds in server for rapid replay
-    o   Extensive mixing, separating, and manipulation of audio data
-    o   Simultaneous use of audio devices by multiple applications
-    o   Use by a growing number of ISVs
-    o   Small size
-    o   Free!  No obnoxious licensing terms
+This package contains a network-transparent, client/server audio
+system, with a library Key features of the Network Audio System
+include:
+ - Device-independent audio over the network
+ - Lots of audio file and data formats
+ - Can store sounds in server for rapid replay
+ - Extensive mixing, separating, and manipulation of audio data
+ - Simultaneous use of audio devices by multiple applications
+ - Use by a growing number of ISVs
+ - Small size
+ - Free! No obnoxious licensing terms
 
 %description -l pl
-W pakiecie znajduje siê sieciwy system dzwiêku -- klient/serwer wraz z 
+W pakiecie znajduje siê sieciwy system dzwiêku -- klient/serwer wraz z
 bibliotek±. Najwa¿niejsze zalety sieciowego systemu d¼wiêku:
-
-    o	Niezale¿ny od urz±dzenia d¼wiêk w sieci
-    o	Du¿a ilo¶æ plików w ró¿nych formatach d¼wiêkowych
-    o	Mo¿liwo¶æ przechowywania d¼wiêku na serwerze
-    o	Zaawansowane miksowanie, oddzielanie i manipulacja formatem d¼wiêkowym
-    o	Mo¿liwo¶æ jednoczesnego u¿ywania urz±dzenia audio przez wiele programów
-    o	U¿ycie wzrastaj±cej ilo¶ci ISV
-    o	Ma³y rozmiar programu
-    o	Wolne oprogramowanie ! Nie ma ograniczeñ licencyjnych
+ - Niezale¿ny od urz±dzenia d¼wiêk w sieci
+ - Du¿a ilo¶æ plików w ró¿nych formatach d¼wiêkowych
+ - Mo¿liwo¶æ przechowywania d¼wiêku na serwerze
+ - Zaawansowane miksowanie, oddzielanie i manipulacja formatem
+   d¼wiêkowym
+ - Mo¿liwo¶æ jednoczesnego u¿ywania urz±dzenia audio przez wiele
+   programów
+ - U¿ycie wzrastaj±cej ilo¶ci ISV
+ - Ma³y rozmiar programu
+ - Wolne oprogramowanie ! Nie ma ograniczeñ licencyjnych
 
 %package devel
 Summary:	Development headers for writing programs using NAS
 Summary(pl):	Pliki naglówkowe dla NAS
 Group:		Development/Libraries
+Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
@@ -59,6 +61,7 @@ Pliki naglówkowe dla NAS.
 Summary:	NAS static library
 Summary(pl):	Biblioteka statyczna NAS
 Group:		Development/Libraries
+Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
@@ -110,4 +113,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %files static
-%attr(644,root,root) %{_libdir}/lib*.a
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
