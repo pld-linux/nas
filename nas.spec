@@ -2,7 +2,7 @@ Summary:	Network Audio System
 Summary(pl):	Sieciowy system d¼wiêku (NAS)
 Name:		nas
 Version:	1.2p5
-Release:	6
+Release:	7
 Copyright:	free
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
@@ -14,7 +14,7 @@ Patch3:		nas-auscope.patch
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
-%define		_mandir		/usr/X11R6/man
+%define		_mandir		%{_prefix}/man
 
 %description
 This package contains a network-transparent, client/server audio system,
@@ -53,7 +53,7 @@ Requires:	%{name} = %{version}
 This package allows you to develop your own network audio programs.
 
 %description -l pl devel
-Pliki naglówkowe dla NAS
+Pliki naglówkowe dla NAS.
 
 %package static
 Summary:	NAS static library
@@ -84,7 +84,9 @@ CXXDEBUGFLAGS="$RPM_OPT_FLAGS -w" World
 rm -rf $RPM_BUILD_ROOT
 make install install.man DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/man/{man1/*,man3/*}
+strip --strip-unneeded %{_libdir}/lib*.so.*.*
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man?/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
