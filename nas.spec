@@ -127,7 +127,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install install.man \
 	MANPATH=%{_mandir} \
 	USRLIBDIR=%{_libdir} \
-	LIBDIR=%{_libdir}/X11 \
 	BINDIR=%{_bindir} \
 	INCROOT=%{_includedir} \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -150,7 +149,7 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/nasd.conf
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*
-%{_libdir}/X11/AuErrorDB
+/usr/X11R6/lib/X11/AuErrorDB
 %{_mandir}/man[15]/*
 
 %files devel
