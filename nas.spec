@@ -5,6 +5,7 @@ Version:	1.2p5
 Release:	5
 Copyright:	free
 Group:		Applications/Sound
+Group(pl):	Aplikacje/D¼wiêk
 Source:		ftp://ftp.x.org/contrib/audio/nas/%{name}-%{version}.tar.gz
 Patch0:		nas.patch
 Patch1:		nas-shared.patch
@@ -42,6 +43,7 @@ bibliotek±. Najwa¿niejsze zalety sieciowego systemu d¼wiêku:
 Summary:	Development headers for writing programs using NAS
 Summary(pl):	Pliki naglówkowe dla NAS
 Group:		Development/Libraries
+Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
@@ -54,6 +56,7 @@ Pliki naglówkowe dla NAS
 Summary:	NAS static library
 Summary(pl):	Biblioteka statyczna NAS
 Group:		Development/Libraries
+Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
