@@ -1,9 +1,0 @@
-diff -ur nas-1.2p5/clients/audio/auscope/auscope nas-1.2p5.fix/clients/audio/auscope/auscope
---- nas-1.2p5/clients/audio/auscope/auscope	Thu Aug  1 23:08:26 1996
-+++ nas-1.2p5.fix/clients/audio/auscope/auscope	Sun Dec 21 06:35:57 1997
-@@ -1,4 +1,4 @@
--#!/usr/local/bin/perl -- # -*-Perl-*-
-+#!/usr/bin/perl -- # -*-Perl-*-
- #
- # $NCDId: @(#)auscope,v 1.21 1996/08/01 21:08:26 greg Exp $
- #
