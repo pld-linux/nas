@@ -49,7 +49,7 @@ Requires:	%{name} = %{version}
 %description devel
 This package allows you to develop your own network audio programs.
 
-%description -l pl devel
+%description devel -l pl
 Pliki naglówkowe dla NAS.
 
 %package static
@@ -61,7 +61,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 NAS static library.
 
-%description -l pl static
+%description static -l pl
 Biblioteka statyczna NAS.
 
 %prep
