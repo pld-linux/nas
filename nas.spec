@@ -5,8 +5,6 @@ Version:	1.5
 Release:	1
 License:	free
 Group:		Applications/Sound
-Group(de):	Applikationen/Laut
-Group(pl):	Aplikacje/D╪wiЙk
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
 URL:		http://radscan.com/nas.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -46,13 +44,6 @@ bibliotek╠. Najwa©niejsze zalety sieciowego systemu d╪wiЙku:
 Summary:	Development headers for writing programs using NAS
 Summary(pl):	Pliki naglСwkowe dla NAS
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -65,13 +56,6 @@ Pliki naglСwkowe dla NAS.
 Summary:	NAS static library
 Summary(pl):	Biblioteka statyczna NAS
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
