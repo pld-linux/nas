@@ -2,7 +2,7 @@ Summary:	Network Audio System
 Summary(pl):	Sieciowy system d¼wiêku (NAS)
 Name:		nas
 Version:	1.2p5
-Release:	5
+Release:	6
 Copyright:	free
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
@@ -12,6 +12,9 @@ Patch1:		nas-shared.patch
 Patch2:		nas-glibc.patch
 Patch3:		nas-auscope.patch
 Buildroot:	/tmp/%{name}-%{version}-root
+
+%define		_prefix		/usr/X11R6
+%define		_mandir		/usr/X11R6/man
 
 %description
 This package contains a network-transparent, client/server audio system,
@@ -91,18 +94,18 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) /usr/X11R6/lib/*.so.*
-%attr(755,root,root) /usr/X11R6/bin/*
-/usr/X11R6/lib/X11/AuErrorDB
-/usr/X11R6/lib/AUVoxConfig.eg
-/usr/X11R6/man/man1/*
+%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_bindir}/*
+%{_libdir}/X11/AuErrorDB
+%{_libdir}/AUVoxConfig.eg
+%{_mandir}/man1/*
 
 %files devel
 %defattr(644,root,root,755)
-/usr/X11R6/include/audio
+%{_includedir}/audio
 
-%attr(755,root,root) /usr/X11R6/lib/*.so
-/usr/X11R6/man/man3/*
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_mandir}/man3/*
 
 %files static
-%attr(644,root,root) /usr/X11R6/lib/*.a
+%attr(644,root,root) %{_libdir}/lib*.a
