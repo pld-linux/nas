@@ -3,12 +3,12 @@ Summary(pl):	Sieciowy system d╪wiЙku (NAS)
 Summary(ru):	NAS - клиент-серверная сетевая поддержка аудио
 Summary(uk):	NAS - кл╕╓нт-серверна мережева п╕дтримка ауд╕о
 Name:		nas
-Version:	1.6
-Release:	7
+Version:	1.7
+Release:	1
 License:	Free
 Group:		Applications/Sound
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
-# Source0-md5:	08b54fbf3af8c2ffab39f6f84f2ab337
+# Source0-md5:	c9918e9c9c95d587a95b455bbabe3b49
 URL:		http://radscan.com/nas.html
 BuildRequires:	XFree86-devel
 BuildRequires:	bison
