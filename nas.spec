@@ -11,7 +11,7 @@ Patch0:		nas.patch
 Patch1:		nas-shared.patch
 Patch2:		nas-glibc.patch
 Patch3:		nas-auscope.patch
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
