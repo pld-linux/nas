@@ -31,18 +31,18 @@ include:
  - Free! No obnoxious licensing terms.
 
 %description -l pl
-W pakiecie znajduje siê sieciowy system d¼wiêku - klient/serwer wraz z
-bibliotek±. Najwa¿niejsze zalety sieciowego systemu d¼wiêku:
- - Niezale¿ny od urz±dzenia d¼wiêk w sieci
- - Du¿a ilo¶æ plików w ró¿nych formatach d¼wiêkowych
- - Mo¿liwo¶æ przechowywania d¼wiêku na serwerze
- - Zaawansowane miksowanie, oddzielanie i manipulacja formatem
-   d¼wiêkowym
- - Mo¿liwo¶æ jednoczesnego u¿ywania urz±dzenia audio przez wiele
-   programów
- - U¿ycie wzrastaj±cej ilo¶ci ISV
- - Ma³y rozmiar programu
- - Wolne oprogramowanie! Nie ma odpychaj±cych ograniczeñ licencyjnych.
+Pakiet zawiera przezroczysty sieciowo d¼wiêkowy system klient/serwer
+wraz z bibliotek±. Najwa¿niejsze cechy Network Audio System to:
+ - Przesy³anie d¼wiêku przez sieæ, niezale¿ne od karty d¼wiêkowej,
+ - Obs³uga du¿ej ilo¶ci formatów d¼wiêku,
+ - Przechowywanie d¼wiêku na serwerze w razie potrzeby wielokrotnego
+   odtwarzania,
+ - Zaawansowane miksowanie, oddzielanie i manipulacja d¼wiêku,
+ - Mo¿liwo¶æ jednoczesnego u¿ywania karty d¼wiêkowej przez wiele
+   programów,
+ - Obs³uga przez coraz wiêksz± liczbê programów,
+ - Ma³y rozmiar,
+ - Wolne oprogramowanie! Brak wstrêtnych ograniczeñ licencyjnych.
 
 %description -l ru
 üÔÏÔ ĞÁËÅÔ ÓÏÄÅÒÖÉÔ ĞÒÏÚÒÁŞÎÕÀ ÄÌÑ ÓÅÔÉ ÓÉÓÔÅÍÕ ËÌÉÅÎÔ-ÓÅÒ×ÅÒÎÏÊ
