@@ -5,12 +5,13 @@ Version:	1.2p5
 Release:	8
 Copyright:	free
 Group:		Applications/Sound
+Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	ftp://ftp.x.org/contrib/audio/nas/%{name}-%{version}.tar.gz
-Patch0:		nas.patch
-Patch1:		nas-shared.patch
-Patch2:		nas-glibc.patch
-Patch3:		nas-auscope.patch
+Patch0:		%{name}.patch
+Patch1:		%{name}-shared.patch
+Patch2:		%{name}-glibc.patch
+Patch3:		%{name}-auscope.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -47,6 +48,7 @@ bibliotek±. Najwa¿niejsze zalety sieciowego systemu d¼wiêku:
 Summary:	Development headers for writing programs using NAS
 Summary(pl):	Pliki naglówkowe dla NAS
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -61,6 +63,7 @@ Pliki naglówkowe dla NAS.
 Summary:	NAS static library
 Summary(pl):	Biblioteka statyczna NAS
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -80,16 +83,12 @@ Biblioteka statyczna NAS.
 
 %build
 xmkmf
-%{__make} WORLDOPTS="-k CDEBUGFLAGS='$RPM_OPT_FLAGS -D__USE_BSD_SIGNAL -w'" \
-CXXDEBUGFLAGS="$RPM_OPT_FLAGS -w" REQUIREDLIBS="-L/usr/X11R6/lib -lXt" World
+%{__make} WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
+CXXDEBUGFLAGS="%{rpmcflsgs} -w" REQUIREDLIBS="-L/usr/X11R6/lib -lXt" World
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install install.man DESTDIR=$RPM_BUILD_ROOT
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man?/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
