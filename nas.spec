@@ -147,9 +147,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc README FAQ TODO BUGS
 %dir %{_sysconfdir}
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/nasd.conf
-%attr(755,root,root) %{_libdir}/lib*.so.*
 %attr(755,root,root) %{_bindir}/*
-/usr/X11R6/lib/X11/AuErrorDB
+%attr(755,root,root) %{_libdir}/lib*.so.*
+%{_libdir}/X11/AuErrorDB
 %{_mandir}/man[15]/*
 
 %files devel
