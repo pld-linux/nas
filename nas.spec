@@ -106,32 +106,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %files static
 %attr(644,root,root) /usr/X11R6/lib/*.a
-
-%changelog
-* Sun Dec 13 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [1.2p5-4d]
-- build against Tornado,
-- fixed compiler flags during compile,
-- translation modified for pl,
-- fixed en translation,
-- fixed files %files,
-- bziped man pages,
-- other -- minor changes.
-
-* Mon Aug 31 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.2p5-4]
-- added -q %setup parameter,
-- spec rewrited for using Buildroot,
-- added using %%{name} and %%{version} in Source,
-- added static subpackage,
-- in %post{un} ldconfig is now runed -p parameter,
-- changeded dependences to "Requires: %%{name} = %%{version}" in devel
-  subpackage,
-- added using $RPM_OPT_FLAGS during compile,
-- added striping shared libraries,
-- added %attr and %defattr macros in %files (allow build package from
-  non-root account).
-
-* Sun Dec 21 1997 Kjetil Wiekhorst Jørgensen (jorgens@fastfire.pvv.org)
-  [1.2p5-3]
-- previous not commented release in rpm package.
