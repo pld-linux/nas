@@ -3,7 +3,7 @@ Summary(pl):	Sieciowy system d¼wiêku (NAS)
 Summary(ru):	NAS - ËÌÉÅÎÔ-ÓÅÒ×ÅÒÎÁÑ ÓÅÔÅ×ÁÑ ĞÏÄÄÅÒÖËÁ ÁÕÄÉÏ
 Summary(uk):	NAS - ËÌ¦¤ÎÔ-ÓÅÒ×ÅÒÎÁ ÍÅÒÅÖÅ×Á Ğ¦ÄÔÒÉÍËÁ ÁÕÄ¦Ï
 Name:		nas
-Version:	1.5
+Version:	1.6
 Release:	5
 License:	Free
 Group:		Applications/Sound
@@ -15,7 +15,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package contains a network-transparent, client/server audio
-system, with a library Key features of the Network Audio System
+system, with a library. Key features of the Network Audio System
 include:
  - Device-independent audio over the network
  - Lots of audio file and data formats
@@ -24,10 +24,10 @@ include:
  - Simultaneous use of audio devices by multiple applications
  - Use by a growing number of ISVs
  - Small size
- - Free! No obnoxious licensing terms
+ - Free! No obnoxious licensing terms.
 
 %description -l pl
-W pakiecie znajduje siê sieciowy system dzwiêku -- klient/serwer wraz z
+W pakiecie znajduje siê sieciowy system dzwiêku - klient/serwer wraz z
 bibliotek±. Najwa¿niejsze zalety sieciowego systemu d¼wiêku:
  - Niezale¿ny od urz±dzenia d¼wiêk w sieci
  - Du¿a ilo¶æ plików w ró¿nych formatach d¼wiêkowych
@@ -38,7 +38,7 @@ bibliotek±. Najwa¿niejsze zalety sieciowego systemu d¼wiêku:
    programów
  - U¿ycie wzrastaj±cej ilo¶ci ISV
  - Ma³y rozmiar programu
- - Wolne oprogramowanie! Nie ma ograniczeñ licencyjnych
+ - Wolne oprogramowanie! Nie ma odpychaj±cych ograniczeñ licencyjnych.
 
 %description -l ru
 üÔÏÔ ĞÁËÅÔ ÓÏÄÅÒÖÉÔ ĞÒÏÚÒÁŞÎÕÀ ÄÌÑ ÓÅÔÉ ÓÉÓÔÅÍÕ ËÌÉÅÎÔ-ÓÅÒ×ÅÒÎÏÊ
@@ -118,7 +118,7 @@ xmkmf
 %{__make} World \
 	WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
 	CXXDEBUGFLAGS="%{rpmcflsgs} -w" \
-	REQUIREDLIBS="-L%{_libdir} -lXt" \
+	REQUIREDLIBS="-L/usr/X11R6/lib -lXt" \
 	CC=%{__cc}
 
 %install
