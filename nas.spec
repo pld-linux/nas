@@ -29,7 +29,7 @@ include:
  - Free! No obnoxious licensing terms
 
 %description -l pl
-W pakiecie znajduje siê sieciwy system dzwiêku -- klient/serwer wraz z
+W pakiecie znajduje siê sieciowy system dzwiêku -- klient/serwer wraz z
 bibliotek±. Najwa¿niejsze zalety sieciowego systemu d¼wiêku:
  - Niezale¿ny od urz±dzenia d¼wiêk w sieci
  - Du¿a ilo¶æ plików w ró¿nych formatach d¼wiêkowych
