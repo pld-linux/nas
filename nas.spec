@@ -127,6 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install install.man \
 	MANPATH=%{_mandir} \
 	USRLIBDIR=%{_libdir} \
+	LIBDIR=%{_libdir}/X11 \
 	BINDIR=%{_bindir} \
 	INCROOT=%{_includedir} \
 	DESTDIR=$RPM_BUILD_ROOT
