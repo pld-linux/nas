@@ -1,21 +1,19 @@
 Summary:	Network Audio System
 Summary(pl):	Sieciowy system d¼wiêku (NAS)
 Name:		nas
-Version:	1.2p5
-Release:	8
+Version:	1.5
+Release:	1
 License:	free
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-Source0:	ftp://ftp.x.org/contrib/audio/nas/%{name}-%{version}.tar.gz
-Patch0:		%{name}.patch
-Patch1:		%{name}-shared.patch
-Patch2:		%{name}-glibc.patch
-Patch3:		%{name}-auscope.patch
+Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
+URL:		http://radscan.com/nas.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
+%define		_sysconfdir	/etc/nas
 
 %description
 This package contains a network-transparent, client/server audio
@@ -84,19 +82,25 @@ Biblioteka statyczna NAS.
 
 %prep
 %setup -q
-%patch0 -p1 
-%patch1 -p1 
-%patch2 -p1 
-%patch3 -p1 
 
 %build
 xmkmf
-%{__make} WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
-CXXDEBUGFLAGS="%{rpmcflsgs} -w" REQUIREDLIBS="-L%{_libdir} -lXt" World
+%{__make} World \
+	WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
+	CXXDEBUGFLAGS="%{rpmcflsgs} -w" \
+	REQUIREDLIBS="-L%{_libdir} -lXt" \
+	CC=%{__cc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install install.man DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install install.man \
+	DESTDIR=$RPM_BUILD_ROOT
+
+mv $RPM_BUILD_ROOT%{_sysconfdir}/nasd.conf.eg \
+	$RPM_BUILD_ROOT%{_sysconfdir}/nasd.conf
+mv $RPM_BUILD_ROOT%{_mandir}/man5/nasd.conf.5nas \
+	$RPM_BUILD_ROOT%{_mandir}/man5/nasd.conf.5
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -106,17 +110,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%config(noreplace) %{_sysconfdir}/nasd.conf
 %attr(755,root,root) %{_libdir}/lib*.so.*
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/X11/AuErrorDB
-%{_libdir}/AUVoxConfig.eg
-%{_mandir}/man1/*
+%{_mandir}/man[15]/*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/audio
-
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_includedir}/audio
 %{_mandir}/man3/*
 
 %files static
