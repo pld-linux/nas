@@ -8,6 +8,7 @@ Release:	5
 License:	Free
 Group:		Applications/Sound
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
+# Source0-md5: 08b54fbf3af8c2ffab39f6f84f2ab337
 URL:		http://radscan.com/nas.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
