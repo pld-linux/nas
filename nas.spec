@@ -3,7 +3,7 @@ Summary(pl):	Sieciowy system d¼wiêku (NAS)
 Name:		nas
 Version:	1.5
 Release:	1
-License:	free
+License:	Free
 Group:		Applications/Sound
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
 URL:		http://radscan.com/nas.html
