@@ -4,7 +4,7 @@ Summary(ru):	NAS - клиент-серверная сетевая поддержка аудио
 Summary(uk):	NAS - кл╕╓нт-серверна мережева п╕дтримка ауд╕о
 Name:		nas
 Version:	1.6
-Release:	6
+Release:	7
 License:	Free
 Group:		Applications/Sound
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
