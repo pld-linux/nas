@@ -3,7 +3,7 @@ Summary(pl):	Sieciowy system d╪wiЙku (NAS)
 Name:		nas
 Version:	1.2p5
 Release:	8
-Copyright:	free
+License:	free
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D╪wiЙk
@@ -49,8 +49,12 @@ Summary:	Development headers for writing programs using NAS
 Summary(pl):	Pliki naglСwkowe dla NAS
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -64,8 +68,12 @@ Summary:	NAS static library
 Summary(pl):	Biblioteka statyczna NAS
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -84,7 +92,7 @@ Biblioteka statyczna NAS.
 %build
 xmkmf
 %{__make} WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
-CXXDEBUGFLAGS="%{rpmcflsgs} -w" REQUIREDLIBS="-L/usr/X11R6/lib -lXt" World
+CXXDEBUGFLAGS="%{rpmcflsgs} -w" REQUIREDLIBS="-L%{_libdir} -lXt" World
 
 %install
 rm -rf $RPM_BUILD_ROOT
