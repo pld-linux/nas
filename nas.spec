@@ -2,7 +2,7 @@ Summary:	Network Audio System
 Summary(pl):	Sieciowy system d¼wiêku (NAS)
 Name:		nas
 Version:	1.2p5
-Release:	7
+Release:	8
 Copyright:	free
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
@@ -81,7 +81,7 @@ Biblioteka statyczna NAS.
 %build
 xmkmf
 %{__make} WORLDOPTS="-k CDEBUGFLAGS='$RPM_OPT_FLAGS -D__USE_BSD_SIGNAL -w'" \
-CXXDEBUGFLAGS="$RPM_OPT_FLAGS -w" World
+CXXDEBUGFLAGS="$RPM_OPT_FLAGS -w" REQUIREDLIBS="-L/usr/X11R6/lib -lXt" World
 
 %install
 rm -rf $RPM_BUILD_ROOT
