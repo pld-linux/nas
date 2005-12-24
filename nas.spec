@@ -9,6 +9,7 @@ License:	Free
 Group:		Applications/Sound
 Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
 # Source0-md5:	c9918e9c9c95d587a95b455bbabe3b49
+Patch0:		%{name}-gcc4.patch
 URL:		http://radscan.com/nas.html
 BuildRequires:	XFree86-devel
 BuildRequires:	bison
@@ -116,6 +117,7 @@ Biblioteka statyczna NAS.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 xmkmf
