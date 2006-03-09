@@ -125,7 +125,7 @@ xmkmf
 	WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
 	CXXDEBUGFLAGS="%{rpmcflsgs} -w" \
 	REQUIREDLIBS="-L/usr/X11R6/%{_lib} -lXt -X11 -lm" \
-	CC=%{__cc}
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
