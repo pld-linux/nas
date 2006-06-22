@@ -3,12 +3,12 @@ Summary(pl):	Sieciowy system d╪wiЙku (NAS)
 Summary(ru):	NAS - клиент-серверная сетевая поддержка аудио
 Summary(uk):	NAS - кл╕╓нт-серверна мережева п╕дтримка ауд╕о
 Name:		nas
-Version:	1.7
+Version:	1.8
 Release:	1
 License:	Free
 Group:		Applications/Sound
-Source0:	http://radscan.com/nas/%{name}-%{version}.src.tar.gz
-# Source0-md5:	c9918e9c9c95d587a95b455bbabe3b49
+Source0:	http://nas.codebrilliance.com/nas/%{name}-%{version}.src.tar.gz
+# Source0-md5:	7e5ecab75a48c75b0c6305fcced34a97
 URL:		http://radscan.com/nas.html
 BuildRequires:	XFree86-devel
 BuildRequires:	bison
@@ -78,7 +78,7 @@ Summary(pl):	Pliki naglСwkowe dla NAS
 Summary(ru):	Библиотеки и .h-файлы для программ с поддержкой NAS
 Summary(uk):	Б╕бл╕отеки та .h-файли для програм з п╕дтримкою NAS
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This package allows you to develop your own network audio programs.
@@ -100,7 +100,7 @@ Summary(pl):	Biblioteka statyczna NAS
 Summary(ru):	Статические библиотеки для программ с поддержкой NAS
 Summary(uk):	Статичн╕ б╕бл╕отеки для програм з п╕дтримкою NAS
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 NAS static library.
@@ -123,7 +123,7 @@ xmkmf
 	WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
 	CXXDEBUGFLAGS="%{rpmcflsgs} -w" \
 	REQUIREDLIBS="-L/usr/X11R6/%{_lib} -lXt -X11 -lm" \
-	CC=%{__cc}
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -137,8 +137,6 @@ rm -rf $RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_sysconfdir}/nasd.conf.eg \
 	$RPM_BUILD_ROOT%{_sysconfdir}/nasd.conf
-mv $RPM_BUILD_ROOT%{_mandir}/man5/nasd.conf.5nas \
-	$RPM_BUILD_ROOT%{_mandir}/man5/nasd.conf.5
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -150,7 +148,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README FAQ TODO BUGS
 %dir %{_sysconfdir}
-%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/nasd.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/nasd.conf
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*
 /usr/X11R6/lib/X11/AuErrorDB
