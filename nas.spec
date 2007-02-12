@@ -1,7 +1,7 @@
 Summary:	Network Audio System
-Summary(pl):	Sieciowy system d╪wiЙku (NAS)
-Summary(ru):	NAS - клиент-серверная сетевая поддержка аудио
-Summary(uk):	NAS - кл╕╓нт-серверна мережева п╕дтримка ауд╕о
+Summary(pl.UTF-8):   Sieciowy system dе╨wiд≥ku (NAS)
+Summary(ru.UTF-8):   NAS - п╨п╩п╦п╣п╫я┌-я│п╣я─п╡п╣я─п╫п╟я▐ я│п╣я┌п╣п╡п╟я▐ п©п╬п╢п╢п╣я─п╤п╨п╟ п╟я┐п╢п╦п╬
+Summary(uk.UTF-8):   NAS - п╨п╩я√я■п╫я┌-я│п╣я─п╡п╣я─п╫п╟ п╪п╣я─п╣п╤п╣п╡п╟ п©я√п╢я┌я─п╦п╪п╨п╟ п╟я┐п╢я√п╬
 Name:		nas
 Version:	1.8
 Release:	1
@@ -33,89 +33,89 @@ include:
  - Small size
  - Free! No obnoxious licensing terms.
 
-%description -l pl
-Pakiet zawiera przezroczysty sieciowo d╪wiЙkowy system klient/serwer
-wraz z bibliotek╠. Najwa©niejsze cechy Network Audio System to:
- - PrzesyЁanie d╪wiЙku przez sieФ, niezale©ne od karty d╪wiЙkowej,
- - ObsЁuga du©ej ilo╤ci formatСw d╪wiЙku,
- - Przechowywanie d╪wiЙku na serwerze w razie potrzeby wielokrotnego
+%description -l pl.UTF-8
+Pakiet zawiera przezroczysty sieciowo dе╨wiд≥kowy system klient/serwer
+wraz z bibliotekд┘. Najwaе╪niejsze cechy Network Audio System to:
+ - Przesyе┌anie dе╨wiд≥ku przez sieд┤, niezaleе╪ne od karty dе╨wiд≥kowej,
+ - Obsе┌uga duе╪ej iloе⌡ci formatцЁw dе╨wiд≥ku,
+ - Przechowywanie dе╨wiд≥ku na serwerze w razie potrzeby wielokrotnego
    odtwarzania,
- - Zaawansowane miksowanie, oddzielanie i manipulacja d╪wiЙku,
- - Mo©liwo╤Ф jednoczesnego u©ywania karty d╪wiЙkowej przez wiele
-   programСw,
- - ObsЁuga przez coraz wiЙksz╠ liczbЙ programСw,
- - MaЁy rozmiar,
- - Wolne oprogramowanie! Brak wstrЙtnych ograniczeЯ licencyjnych.
+ - Zaawansowane miksowanie, oddzielanie i manipulacja dе╨wiд≥ku,
+ - Moе╪liwoе⌡д┤ jednoczesnego uе╪ywania karty dе╨wiд≥kowej przez wiele
+   programцЁw,
+ - Obsе┌uga przez coraz wiд≥kszд┘ liczbд≥ programцЁw,
+ - Maе┌y rozmiar,
+ - Wolne oprogramowanie! Brak wstrд≥tnych ograniczeе└ licencyjnych.
 
-%description -l ru
-Этот пакет содержит прозрачную для сети систему клиент-серверной
-поддержки звука, с библиотекой. Ключевые возможности NAS включают:
-    - Независимое от устройств аудио по сети
-    - Большое количество поддерживаемых форматов
-    - Возможность сохранения звуков на сервере для быстрого повторного
-      проигрывания
-    - Широкие возможности микширования, разделения и манипуляции
-      аудиоданными
-    - Одновременное использование аудиоустройств многими приложениями
-    - Применяется растущим числом ISV
-    - Маленький размер
-    - Свободна от лицензионных условий
+%description -l ru.UTF-8
+п╜я┌п╬я┌ п©п╟п╨п╣я┌ я│п╬п╢п╣я─п╤п╦я┌ п©я─п╬п╥я─п╟я┤п╫я┐я▌ п╢п╩я▐ я│п╣я┌п╦ я│п╦я│я┌п╣п╪я┐ п╨п╩п╦п╣п╫я┌-я│п╣я─п╡п╣я─п╫п╬п╧
+п©п╬п╢п╢п╣я─п╤п╨п╦ п╥п╡я┐п╨п╟, я│ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╬п╧. п п╩я▌я┤п╣п╡я▀п╣ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌п╦ NAS п╡п╨п╩я▌я┤п╟я▌я┌:
+    - п²п╣п╥п╟п╡п╦я│п╦п╪п╬п╣ п╬я┌ я┐я│я┌я─п╬п╧я│я┌п╡ п╟я┐п╢п╦п╬ п©п╬ я│п╣я┌п╦
+    - п▒п╬п╩я▄я┬п╬п╣ п╨п╬п╩п╦я┤п╣я│я┌п╡п╬ п©п╬п╢п╢п╣я─п╤п╦п╡п╟п╣п╪я▀я┘ я└п╬я─п╪п╟я┌п╬п╡
+    - п▓п╬п╥п╪п╬п╤п╫п╬я│я┌я▄ я│п╬я┘я─п╟п╫п╣п╫п╦я▐ п╥п╡я┐п╨п╬п╡ п╫п╟ я│п╣я─п╡п╣я─п╣ п╢п╩я▐ п╠я▀я│я┌я─п╬пЁп╬ п©п╬п╡я┌п╬я─п╫п╬пЁп╬
+      п©я─п╬п╦пЁя─я▀п╡п╟п╫п╦я▐
+    - п╗п╦я─п╬п╨п╦п╣ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌п╦ п╪п╦п╨я┬п╦я─п╬п╡п╟п╫п╦я▐, я─п╟п╥п╢п╣п╩п╣п╫п╦я▐ п╦ п╪п╟п╫п╦п©я┐п╩я▐я├п╦п╦
+      п╟я┐п╢п╦п╬п╢п╟п╫п╫я▀п╪п╦
+    - п·п╢п╫п╬п╡я─п╣п╪п╣п╫п╫п╬п╣ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣ п╟я┐п╢п╦п╬я┐я│я┌я─п╬п╧я│я┌п╡ п╪п╫п╬пЁп╦п╪п╦ п©я─п╦п╩п╬п╤п╣п╫п╦я▐п╪п╦
+    - п÷я─п╦п╪п╣п╫я▐п╣я┌я│я▐ я─п╟я│я┌я┐я┴п╦п╪ я┤п╦я│п╩п╬п╪ ISV
+    - п°п╟п╩п╣п╫я▄п╨п╦п╧ я─п╟п╥п╪п╣я─
+    - п║п╡п╬п╠п╬п╢п╫п╟ п╬я┌ п╩п╦я├п╣п╫п╥п╦п╬п╫п╫я▀я┘ я┐я│п╩п╬п╡п╦п╧
 
-%description -l uk
-Цей пакет м╕стить прозору для мереж╕ систему кл╕╓нт-серверно╖
-п╕дтримки звуку, з б╕бл╕отекою. Ключов╕ можливост╕ NAS включають:
-    - Незалежне в╕д пристро╖в ауд╕о через мережу
-    - Велика к╕льк╕сть п╕дтримуваних формат╕в
-    - Можлив╕сть збер╕гання звук╕в на сервер╕ для швидкого повторного
-      програвання
-    - Широк╕ можливост╕ м╕кшування, розд╕лення та ман╕пуляц╕╖ ауд╕оданими
-    - Одночасне використання ауд╕опристро╖в багатьма прикладними
-      програмами
-    - Застосову╓ться всезростаючим числом ISV
-    - Маленький розм╕р
-    - В╕льна в╕д л╕ценз╕йних умов
+%description -l uk.UTF-8
+п╕п╣п╧ п©п╟п╨п╣я┌ п╪я√я│я┌п╦я┌я▄ п©я─п╬п╥п╬я─я┐ п╢п╩я▐ п╪п╣я─п╣п╤я√ я│п╦я│я┌п╣п╪я┐ п╨п╩я√я■п╫я┌-я│п╣я─п╡п╣я─п╫п╬я≈
+п©я√п╢я┌я─п╦п╪п╨п╦ п╥п╡я┐п╨я┐, п╥ п╠я√п╠п╩я√п╬я┌п╣п╨п╬я▌. п п╩я▌я┤п╬п╡я√ п╪п╬п╤п╩п╦п╡п╬я│я┌я√ NAS п╡п╨п╩я▌я┤п╟я▌я┌я▄:
+    - п²п╣п╥п╟п╩п╣п╤п╫п╣ п╡я√п╢ п©я─п╦я│я┌я─п╬я≈п╡ п╟я┐п╢я√п╬ я┤п╣я─п╣п╥ п╪п╣я─п╣п╤я┐
+    - п▓п╣п╩п╦п╨п╟ п╨я√п╩я▄п╨я√я│я┌я▄ п©я√п╢я┌я─п╦п╪я┐п╡п╟п╫п╦я┘ я└п╬я─п╪п╟я┌я√п╡
+    - п°п╬п╤п╩п╦п╡я√я│я┌я▄ п╥п╠п╣я─я√пЁп╟п╫п╫я▐ п╥п╡я┐п╨я√п╡ п╫п╟ я│п╣я─п╡п╣я─я√ п╢п╩я▐ я┬п╡п╦п╢п╨п╬пЁп╬ п©п╬п╡я┌п╬я─п╫п╬пЁп╬
+      п©я─п╬пЁя─п╟п╡п╟п╫п╫я▐
+    - п╗п╦я─п╬п╨я√ п╪п╬п╤п╩п╦п╡п╬я│я┌я√ п╪я√п╨я┬я┐п╡п╟п╫п╫я▐, я─п╬п╥п╢я√п╩п╣п╫п╫я▐ я┌п╟ п╪п╟п╫я√п©я┐п╩я▐я├я√я≈ п╟я┐п╢я√п╬п╢п╟п╫п╦п╪п╦
+    - п·п╢п╫п╬я┤п╟я│п╫п╣ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐ п╟я┐п╢я√п╬п©я─п╦я│я┌я─п╬я≈п╡ п╠п╟пЁп╟я┌я▄п╪п╟ п©я─п╦п╨п╩п╟п╢п╫п╦п╪п╦
+      п©я─п╬пЁя─п╟п╪п╟п╪п╦
+    - п≈п╟я│я┌п╬я│п╬п╡я┐я■я┌я▄я│я▐ п╡я│п╣п╥я─п╬я│я┌п╟я▌я┤п╦п╪ я┤п╦я│п╩п╬п╪ ISV
+    - п°п╟п╩п╣п╫я▄п╨п╦п╧ я─п╬п╥п╪я√я─
+    - п▓я√п╩я▄п╫п╟ п╡я√п╢ п╩я√я├п╣п╫п╥я√п╧п╫п╦я┘ я┐п╪п╬п╡
 
 %package devel
 Summary:	Development headers for writing programs using NAS
-Summary(pl):	Pliki naglСwkowe dla NAS
-Summary(ru):	Библиотеки и .h-файлы для программ с поддержкой NAS
-Summary(uk):	Б╕бл╕отеки та .h-файли для програм з п╕дтримкою NAS
+Summary(pl.UTF-8):   Pliki naglцЁwkowe dla NAS
+Summary(ru.UTF-8):   п▒п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╦ .h-я└п╟п╧п╩я▀ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ я│ п©п╬п╢п╢п╣я─п╤п╨п╬п╧ NAS
+Summary(uk.UTF-8):   п▒я√п╠п╩я√п╬я┌п╣п╨п╦ я┌п╟ .h-я└п╟п╧п╩п╦ п╢п╩я▐ п©я─п╬пЁя─п╟п╪ п╥ п©я√п╢я┌я─п╦п╪п╨п╬я▌ NAS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This package allows you to develop your own network audio programs.
 
-%description devel -l pl
-Pliki nagЁСwkowe dla NAS.
+%description devel -l pl.UTF-8
+Pliki nagе┌цЁwkowe dla NAS.
 
-%description devel -l ru
-Этот пакет позволяет вам разрабатывать собственные программы с
-поддержкой звука по сети.
+%description devel -l ru.UTF-8
+п╜я┌п╬я┌ п©п╟п╨п╣я┌ п©п╬п╥п╡п╬п╩я▐п╣я┌ п╡п╟п╪ я─п╟п╥я─п╟п╠п╟я┌я▀п╡п╟я┌я▄ я│п╬п╠я│я┌п╡п╣п╫п╫я▀п╣ п©я─п╬пЁя─п╟п╪п╪я▀ я│
+п©п╬п╢п╢п╣я─п╤п╨п╬п╧ п╥п╡я┐п╨п╟ п©п╬ я│п╣я┌п╦.
 
-%description devel -l uk
-Цей пакет дозволя╓ вам розробляти власн╕ програми з п╕дтримкою звуку
-через мережу.
+%description devel -l uk.UTF-8
+п╕п╣п╧ п©п╟п╨п╣я┌ п╢п╬п╥п╡п╬п╩я▐я■ п╡п╟п╪ я─п╬п╥я─п╬п╠п╩я▐я┌п╦ п╡п╩п╟я│п╫я√ п©я─п╬пЁя─п╟п╪п╦ п╥ п©я√п╢я┌я─п╦п╪п╨п╬я▌ п╥п╡я┐п╨я┐
+я┤п╣я─п╣п╥ п╪п╣я─п╣п╤я┐.
 
 %package static
 Summary:	NAS static library
-Summary(pl):	Biblioteka statyczna NAS
-Summary(ru):	Статические библиотеки для программ с поддержкой NAS
-Summary(uk):	Статичн╕ б╕бл╕отеки для програм з п╕дтримкою NAS
+Summary(pl.UTF-8):   Biblioteka statyczna NAS
+Summary(ru.UTF-8):   п║я┌п╟я┌п╦я┤п╣я│п╨п╦п╣ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ я│ п©п╬п╢п╢п╣я─п╤п╨п╬п╧ NAS
+Summary(uk.UTF-8):   п║я┌п╟я┌п╦я┤п╫я√ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ п╢п╩я▐ п©я─п╬пЁя─п╟п╪ п╥ п©я√п╢я┌я─п╦п╪п╨п╬я▌ NAS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 NAS static library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna NAS.
 
-%description static -l ru
-Статические библиотеки для программ с поддержкой звука по сети.
+%description static -l ru.UTF-8
+п║я┌п╟я┌п╦я┤п╣я│п╨п╦п╣ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ я│ п©п╬п╢п╢п╣я─п╤п╨п╬п╧ п╥п╡я┐п╨п╟ п©п╬ я│п╣я┌п╦.
 
-%description static -l uk
-Статичн╕ б╕бл╕отеки для програм з п╕дтримкою звуку через мережу.
+%description static -l uk.UTF-8
+п║я┌п╟я┌п╦я┤п╫я√ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ п╢п╩я▐ п©я─п╬пЁя─п╟п╪ п╥ п©я√п╢я┌я─п╦п╪п╨п╬я▌ п╥п╡я┐п╨я┐ я┤п╣я─п╣п╥ п╪п╣я─п╣п╤я┐.
 
 %prep
 %setup -q
