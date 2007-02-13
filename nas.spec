@@ -1,7 +1,7 @@
 Summary:	Network Audio System
-Summary(pl.UTF-8):   Sieciowy system dźwięku (NAS)
-Summary(ru.UTF-8):   NAS - клиент-серверная сетевая поддержка аудио
-Summary(uk.UTF-8):   NAS - клієнт-серверна мережева підтримка аудіо
+Summary(pl.UTF-8):	Sieciowy system dźwięku (NAS)
+Summary(ru.UTF-8):	NAS - клиент-серверная сетевая поддержка аудио
+Summary(uk.UTF-8):	NAS - клієнт-серверна мережева підтримка аудіо
 Name:		nas
 Version:	1.8
 Release:	1
@@ -77,9 +77,9 @@ wraz z biblioteką. Najważniejsze cechy Network Audio System to:
 
 %package devel
 Summary:	Development headers for writing programs using NAS
-Summary(pl.UTF-8):   Pliki naglówkowe dla NAS
-Summary(ru.UTF-8):   Библиотеки и .h-файлы для программ с поддержкой NAS
-Summary(uk.UTF-8):   Бібліотеки та .h-файли для програм з підтримкою NAS
+Summary(pl.UTF-8):	Pliki naglówkowe dla NAS
+Summary(ru.UTF-8):	Библиотеки и .h-файлы для программ с поддержкой NAS
+Summary(uk.UTF-8):	Бібліотеки та .h-файли для програм з підтримкою NAS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -99,9 +99,9 @@ Pliki nagłówkowe dla NAS.
 
 %package static
 Summary:	NAS static library
-Summary(pl.UTF-8):   Biblioteka statyczna NAS
-Summary(ru.UTF-8):   Статические библиотеки для программ с поддержкой NAS
-Summary(uk.UTF-8):   Статичні бібліотеки для програм з підтримкою NAS
+Summary(pl.UTF-8):	Biblioteka statyczna NAS
+Summary(ru.UTF-8):	Статические библиотеки для программ с поддержкой NAS
+Summary(uk.UTF-8):	Статичні бібліотеки для програм з підтримкою NAS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
