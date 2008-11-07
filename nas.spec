@@ -4,7 +4,7 @@ Summary(ru.UTF-8):	NAS - клиент-серверная сетевая подд
 Summary(uk.UTF-8):	NAS - клієнт-серверна мережева підтримка аудіо
 Name:		nas
 Version:	1.9
-Release:	1
+Release:	2
 License:	Free
 Group:		Applications/Sound
 Source0:	http://nas.codebrilliance.com/nas/%{name}-%{version}.src.tar.gz
