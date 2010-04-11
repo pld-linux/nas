@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Sieciowy system dźwięku (NAS)
 Summary(ru.UTF-8):	NAS - клиент-серверная сетевая поддержка аудио
 Summary(uk.UTF-8):	NAS - клієнт-серверна мережева підтримка аудіо
 Name:		nas
-Version:	1.9.1
+Version:	1.9.2
 Release:	1
 License:	Free
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/nas/%{name}-%{version}.src.tar.gz
-# Source0-md5:	d975efefba50b985446bb2c2cb4ee91f
+# Source0-md5:	ed7864f55b384452167959022cfb403b
 URL:		http://radscan.com/nas.html
 BuildRequires:	bison
 BuildRequires:	flex
@@ -125,8 +125,11 @@ xmkmf
 %{__make} World \
 	WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
 	CXXDEBUGFLAGS="%{rpmcflsgs} -w" \
+	LOCAL_LDFLAGS="%{rpmldflags}" \
+	CC="%{__cc}" \
+	AUDIOLIBS="-L`pwd`/lib -laudio" \
 	REQUIREDLIBS="-lXt -X11 -lm" \
-	CC="%{__cc}"
+	EXTRAXAWCLIENTLIBS=
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -152,18 +155,32 @@ rm -rf $RPM_BUILD_ROOT
 %doc README FAQ TODO HISTORY
 %dir %{_sysconfdir}
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/nasd.conf
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_bindir}/au*
+%attr(755,root,root) %{_bindir}/checkmail
+%attr(755,root,root) %{_bindir}/issndfile
+%attr(755,root,root) %{_bindir}/nasd
+%attr(755,root,root) %{_bindir}/playbucket
+%attr(755,root,root) %{_bindir}/soundtoh
+%attr(755,root,root) %{_libdir}/libaudio.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/libaudio.so.2
 %{_libdir}/X11/AuErrorDB
-%{_mandir}/man[15]/*
+%{_mandir}/man1/au*.1x*
+%{_mandir}/man1/checkmail.1x*
+%{_mandir}/man1/issndfile.1x*
+%{_mandir}/man1/nas.1x*
+%{_mandir}/man1/nasd.1x*
+%{_mandir}/man1/playbucket.1x*
+%{_mandir}/man1/soundtoh.1x*
+%{_mandir}/man5/nasd.conf.5x*
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/{*.txt,*.ps}
-%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/libaudio.so
 %{_includedir}/audio
-%{_mandir}/man3/*
+%{_mandir}/man3/Au*.3x*
+%{_mandir}/man3/Sound*.3x*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libaudio.a
