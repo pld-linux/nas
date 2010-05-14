@@ -127,7 +127,7 @@ xmkmf
 	CXXDEBUGFLAGS="%{rpmcflsgs} -w" \
 	LOCAL_LDFLAGS="%{rpmldflags}" \
 	CC="%{__cc}" \
-	AUDIOLIBS="-L`pwd`/lib -laudio" \
+	AUDIOLIBS="-L`pwd`/lib/audio -laudio" \
 	REQUIREDLIBS="-lXt -X11 -lm" \
 	EXTRAXAWCLIENTLIBS=
 
