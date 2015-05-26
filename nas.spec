@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Sieciowy system dźwięku (NAS)
 Summary(ru.UTF-8):	NAS - клиент-серверная сетевая поддержка аудио
 Summary(uk.UTF-8):	NAS - клієнт-серверна мережева підтримка аудіо
 Name:		nas
-Version:	1.9.3
-Release:	2
+Version:	1.9.4
+Release:	1
 License:	Free
 Group:		Applications/Sound
-Source0:	http://dl.sourceforge.net/nas/%{name}-%{version}.src.tar.gz
-# Source0-md5:	ecd01a3b4e17a9d464efa83a03618025
+Source0:	http://downloads.sourceforge.net/nas/%{name}-%{version}.src.tar.gz
+# Source0-md5:	dac0e6cd3e5d6a37ae1dff364236a752
 URL:		http://radscan.com/nas.html
 BuildRequires:	bison
 BuildRequires:	flex
