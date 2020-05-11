@@ -121,6 +121,7 @@ Biblioteka statyczna NAS.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.guess config
 xmkmf
 %{__make} World \
 	WORLDOPTS="-k CDEBUGFLAGS='%{rpmcflags} -D__USE_BSD_SIGNAL -w'" \
