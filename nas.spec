@@ -10,6 +10,7 @@ Group:		Applications/Sound
 Source0:	http://downloads.sourceforge.net/nas/%{name}-%{version}.src.tar.gz
 # Source0-md5:	dac0e6cd3e5d6a37ae1dff364236a752
 URL:		http://radscan.com/nas.html
+BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	xorg-cf-files >= 1.0.1-0.3
